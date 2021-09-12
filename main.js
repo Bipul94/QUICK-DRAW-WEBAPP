@@ -1,0 +1,15 @@
+function setup(){
+canvas = createCanvas(300, 400)
+canvas.center()
+background("white")
+canvas.mouseReleased(classifyCanvas)
+synth = window.speechSynthesis;
+}
+
+function preload(){
+    classifier = ml5.imageClassifier('DoodleNet')
+}
+
+function clearCanvas(){
+    background("white")
+}
